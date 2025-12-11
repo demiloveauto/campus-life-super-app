@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Life — Map (Wireframe)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" role="main">
+    <header class="header" aria-label="App header">
+      <div class="brand">
+        <div class="logo">CL</div>
+        <div>
+          <div class="app-title">Campus Life Super App</div>
+          <div class="small">wireframe — map</div>
+        </div>
+      </div>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="map.html" class="active">Map</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Campus Map</h2>
+      <p class="small">Search for buildings and see categories (Dining, Housing, Academic, Services).</p>
+
+      <div class="card" style="margin-bottom:12px">
+        <form id="map-search-form" aria-label="Map search">
+          <label for="map-search-input" class="small">Search buildings</label>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <input id="map-search-input" placeholder="e.g., Library, Dining Hall" style="flex:1;padding:10px;border:1px solid #eee;border-radius:6px" />
+            <button class="btn" type="submit">Search</button>
+          </div>
+        </form>
+        <div id="map-search-result" class="small" style="margin-top:8px"></div>
+      </div>
+
+      <div class="map-box" role="region" aria-label="Map placeholder">
+        MAP PLACEHOLDER (Interactive map would go here; Map API placeholder)
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div class="card">
+        <div class="label">Map Legend / Categories</div>
+        <div class="small">[ Buttons: Dining | Housing | Academic | Services ]</div>
+      </div>
+
+      <div class="flow-note">Navigation: From map you can click a building marker → open building detail (popup) or click "Directions".</div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="small">© Campus Life — Wireframe</div>
+      <div class="actions">
+        <button class="btn">Back to Home</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

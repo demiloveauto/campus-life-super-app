@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Life — Services (Wireframe)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" role="main">
+    <header class="header" aria-label="App header">
+      <div class="brand">
+        <div class="logo">CL</div>
+        <div>
+          <div class="app-title">Campus Life Super App</div>
+          <div class="small">wireframe — services</div>
+        </div>
+      </div>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="map.html">Map</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Campus Services</h2>
+      <p class="small">This page lists core campus services. Each item should link to a detail page or popup (placeholder).</p>
+
+      <section class="service-list" aria-label="Service list">
+        <article class="service-item" aria-labelledby="s-it">
+          <div class="icon">IT</div>
+          <div>
+            <div id="s-it" class="label">IT Help Desk</div>
+            <div class="small">Contact: help@campus.edu — [ Call / Book appointment button placeholder ]</div>
+          </div>
+        </article>
+
+        <article class="service-item" aria-labelledby="s-counsel">
+          <div class="icon">HC</div>
+          <div>
+            <div id="s-counsel" class="label">Counseling Services</div>
+            <div class="small">Hours, contact, and appointment link placeholder.</div>
+          </div>
+        </article>
+
+        <article class="service-item" aria-labelledby="s-housing">
+          <div class="icon">HS</div>
+          <div>
+            <div id="s-housing" class="label">Housing</div>
+            <div class="small">Housing office info and forms placeholder.</div>
+          </div>
+        </article>
+
+        <article class="service-item" aria-labelledby="s-advising">
+          <div class="icon">AD</div>
+          <div>
+            <div id="s-advising" class="label">Academic Advising</div>
+            <div class="small">Advising contacts and booking placeholder.</div>
+          </div>
+        </article>
+  </section>
+
+  <div style="height:12px"></div>
+
+      <div class="card">
+        <div class="label">Services API Placeholder</div>
+        <div class="small">[ Box for dynamic content fetched from an API — e.g., status, open hours ]</div>
+      </div>
+
+      <div class="flow-note">Navigation flow: Click a service → service detail popup/page (not implemented in wireframe).</div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="small">© Campus Life — Wireframe</div>
+      <div class="actions">
+        <button class="btn">Back to Home</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

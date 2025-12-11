@@ -1,12 +1,190 @@
-/* Main stylesheet */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* styles.css - simple wireframe styling (mobile-first) */
+
+:root{
+    --accent: #333;
+    --muted: #777;
+    --border: #cfcfcf;
+    --gap: 16px;
+    --max-width: 1000px;
+    --padding: 16px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    background:#fafafa;
+    color:var(--accent);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:var(--padding);
+    display:flex;
+    justify-content:center;
 }
+
+.container{
+    width:100%;
+    max-width:var(--max-width);
+    background:white;
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:var(--padding);
+    box-shadow:0 6px 18px rgba(0,0,0,0.04);
+}
+
+/* Header / Nav */
+.header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    justify-content:space-between;
+    margin-bottom:var(--gap);
+}
+.brand{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+.logo{
+    width:40px;
+    height:40px;
+    border-radius:6px;
+    border:2px dashed var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:var(--muted);
+}
+.app-title{
+    font-size:1.1rem;
+    font-weight:700;
+}
+.nav{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+.nav a{
+    text-decoration:none;
+    color:var(--muted);
+    padding:8px 12px;
+    border-radius:6px;
+    border:1px dashed transparent;
+    font-weight:600;
+    font-size:0.95rem;
+}
+.nav a.active{
+    color:var(--accent);
+    border-color:var(--border);
+    background:#fff;
+}
+
+/* Wireframe sections */
+.hero{
+    border:2px dashed var(--border);
+    height:180px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    margin-bottom:var(--gap);
+}
+.grid{
+    display:grid;
+    gap:var(--gap);
+    grid-template-columns:1fr;
+}
+@media(min-width:820px){
+    .grid.two{grid-template-columns: 2fr 1fr;}
+    .grid.three{grid-template-columns: repeat(3, 1fr);}
+}
+
+/* Feature boxes, placeholders */
+.card{
+    border:2px dashed var(--border);
+    padding:12px;
+    border-radius:8px;
+    min-height:80px;
+    color:var(--muted);
+}
+.card .label{
+    font-weight:700;
+    color:var(--accent);
+    font-size:0.95rem;
+    margin-bottom:8px;
+}
+
+/* Footer */
+.footer{
+    margin-top:var(--gap);
+    border-top:1px solid #eee;
+    padding-top:12px;
+    font-size:0.9rem;
+    color:var(--muted);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* Small utilities */
+.actions{display:flex; gap:8px; align-items:center;}
+.btn{
+    padding:8px 12px;
+    border-radius:6px;
+    background:transparent;
+    border:2px dashed var(--border);
+    font-weight:700;
+    cursor:pointer;
+}
+.placeholder-img{
+    width:100%;
+    height:120px;
+    border-radius:6px;
+    border:2px dashed var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+}
+
+/* Map placeholder */
+.map-box{
+    height:360px;
+    border-radius:8px;
+    border:2px dashed var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+}
+
+/* service list */
+.service-list{
+    display:grid;
+    gap:12px;
+}
+.service-item{
+    border:2px dashed var(--border);
+    padding:8px;
+    border-radius:8px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+.service-item .icon{
+    width:48px;height:48px;border-radius:6px;border:2px dashed var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted)
+}
+.small{font-size:0.85rem;color:var(--muted)}
+
+/* arrows for navigation flow notes (visual only) */
+.flow-note{
+    margin-top:12px;
+    font-size:0.85rem;
+    color:var(--muted);
+}
+
+/* accessibility focus */
+a:focus, button:focus { outline:3px solid #e6f0ff; outline-offset:2px; }
